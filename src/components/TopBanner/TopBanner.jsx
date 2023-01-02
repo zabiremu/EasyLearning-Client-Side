@@ -8,8 +8,8 @@ export default class TopBanner extends Component {
         <Container fluid className="top-banner">
             <Row className=''>
                 <Col className='top-content text-center'>
-                    <h1>Easy Learning</h1>
-                    <h4>Learn Profesionally</h4>
+                    <h1 className='top-Title'>Easy Learning</h1>
+                    <h4 className='top-sub-Title'>Learn Profesionally</h4>
                     <button className='btn btn-primary'>Learn More</button>
                 </Col>
             </Row>

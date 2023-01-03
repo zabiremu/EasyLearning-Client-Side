@@ -130,7 +130,7 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  min-height: 550px;
+  height: 550px;
   position: relative;
   z-index: 1;
 }
@@ -145,20 +145,34 @@
 }
 .summary_title{
   font-family: var(--montserrat);
-  font-weight: 700;
-  font-size: 40px;
+  font-weight: 700 !important;
+  font-size: 40px !important;
   color: #fff !important;
   transition: all linear 0.4s;
 }
 .summary_details{
   font-family: var(--raleway);
-  font-size: 20px;
+  font-size: 20px !important;
   font-weight: 400;
-  color: #ffd900;
+  color: #ffd900 !important;
 }
-.Summary_wrapper{
-  content: '';
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+
+.card_title{
+  font-family: var(--montserrat);
+  font-size: 20px !important;
+  font-weight: 700 !important;
+  color: #000;
+  padding-bottom: 8px;
+}
+.card_subtitle{
+  font-family: var(--raleway);
+  font-size: 14px !important;
+  color: #000;
+}
+.sum_icon i{
+  font-size: 40px;
+  color: #fff;
+}
+.summary_content{
+  margin-top: 10%;
 }

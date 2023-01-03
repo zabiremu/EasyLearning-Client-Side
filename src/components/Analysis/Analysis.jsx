@@ -1,15 +1,10 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { PureComponent } from "react";
 import {
   BarChart,
   Bar,
-  Cell,
   XAxis,
-  YAxis,
-  CartesianGrid,
   Tooltip,
-  Legend,
   ResponsiveContainer,
 } from "recharts";
 
@@ -31,7 +26,7 @@ export default class Analysis extends Component {
           project: 95,
         },
         {
-          Technology: "React 85",
+          Technology: "React",
           project: 85,
         },
         {
@@ -59,19 +54,17 @@ export default class Analysis extends Component {
         <Container>
           <h1 className="service_title text-center">Technolgy Used</h1>
           <div className="bottom"></div>
-          <Row>
-            <Col lg={7} md={12} sm={12}>
+          <Row className="mx-auto">
+            <Col lg={6} md={12} sm={12}>
               <ResponsiveContainer width="100%" height="100%">
                 <BarChart width={150} height={40} data={this.state.data}>
                   <XAxis dataKey="Technology" />
                   <Tooltip />
-                  <Legend />
                   <Bar dataKey="project" fill="#051b35" />
-                  <YAxis />
                 </BarChart>
               </ResponsiveContainer>
             </Col>
-            <Col lg={5} md={12} sm={12}>
+            <Col lg={6} md={12} sm={12}>
               <div>
                 <p className="text-justify service-desc">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.

@@ -143,3 +143,22 @@
   background-color: rgba(0, 6, 41, 0.7);
   z-index: -1;
 }
+.summary_title{
+  font-family: var(--montserrat);
+  font-weight: 700;
+  font-size: 40px;
+  color: #fff !important;
+  transition: all linear 0.4s;
+}
+.summary_details{
+  font-family: var(--raleway);
+  font-size: 20px;
+  font-weight: 400;
+  color: #ffd900;
+}
+.Summary_wrapper{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}

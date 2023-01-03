@@ -1,14 +1,4 @@
 /*  co mmon section start  */
-.container,
-.container-fluid,
-.container-lg,
-.container-md,
-.container-sm,
-.container-xl,
-.container-xxl {
-  padding-right: 0;
-  padding-left: 0;
-}
 :root {
   --montserrat: "Montserrat", sans-serif;
   --subrayada: "Montserrat Subrayada", sans-serif;
@@ -94,4 +84,18 @@
   width: 100px;
   margin: -4.9rem auto 0;
   margin-bottom: 3rem;
+}
+.nav_title{
+  font-family: var(--montserrat);
+  font-weight: 700;
+  font-size: 30px;
+  color: #fff;
+  transition: all linear 0.4s;
+}
+.nav_scroll{
+  font-family: var(--montserrat);
+  font-weight: 700;
+  font-size: 30px;
+  color: #051b35;
+  transition: all linear 0.4s;
 }

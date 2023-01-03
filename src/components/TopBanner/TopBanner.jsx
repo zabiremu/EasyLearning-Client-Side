@@ -4,7 +4,7 @@ export default class TopBanner extends Component {
   render() {
     return (
       <Fragment >
-        <Container fluid className="top-banner">
+        <Container fluid className="top-banner p-0">
             <Row className=''>
                 <Col className='top-content text-center'>
                     <h1 className='top-Title'>Easy Learning</h1>

@@ -110,3 +110,17 @@
   background-color: #fff !important;
   transition: all linear 0.4s;
 }
+.navItem{
+  font-family: var(--montserrat);
+  font-weight: 700;
+  font-size: 16px;
+  color: #fff !important;
+  transition: all linear 0.4s;
+}
+.navItem_scroll{
+  font-family: var(--montserrat);
+  font-weight: 700;
+  font-size: 16px;
+  color: #000 !important;
+  transition: all linear 0.4s;
+}

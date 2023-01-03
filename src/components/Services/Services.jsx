@@ -8,15 +8,27 @@ render() {
 return (
 <Fragment>
     <Container>
-        <Row>
+        <Row className='mx-auto'>
             <Col lg={4} md={6} sm={12}>
-                <img src={ecoomerceIcon} alt="" className='ecoomerceIcon'/>
+            <div className='Service-card text-center'>
+                <img src={ecoomerceIcon} alt="" className='ecoomerceIcon' />
+                <h2 className='Service-name'>Ecommerce</h2>
+                <p className='service-desc'>I will design and develop ecommerce online store website</p>
+            </div>
             </Col>
             <Col lg={4} md={6} sm={12}>
+            <div className='Service-card text-center'>
                 <img src={design} alt="" className='design' />
+                <h2 className='Service-name'>Web Design</h2>
+                <p className='service-desc'>Qualified web design and attractive effects whichs catches visitor's Eye</p>
+            </div>
             </Col>
             <Col lg={4} md={6} sm={12}>
-                <img src={web} alt="" className='web'/>
+            <div className='Service-card text-center'>
+                <img src={web} alt="" className='web' />
+                <h2 className='Service-name'>Web Development</h2>
+                <p className='service-desc'>Clean and fresh issue free code to make your website dynamic prefectly</p>
+            </div>
             </Col>
         </Row>
     </Container>

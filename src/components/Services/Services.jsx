@@ -8,7 +8,7 @@ export default class Services extends Component {
     return (
       <Fragment>
         <Container>
-          <h1 className="service_title text-center">Services</h1>
+          <h1 className="service_title text-center">My Services</h1>
           <div className="bottom"></div>
           <Row className="mx-auto">
             <Col lg={4} md={6} sm={12}>

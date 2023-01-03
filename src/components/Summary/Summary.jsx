@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Card, Button, Col, Container, Row } from "react-bootstrap";
+import CountUp from 'react-countup';
 export default class Summary extends Component {
   render() {
     return (
@@ -11,7 +12,7 @@ export default class Summary extends Component {
                 <Row className="summary_content">
                   <Col lg={4} md={4} sm={4}>
                     <span className="sum_icon"><i class="fa-solid fa-globe"></i></span>
-                    <h1 className="summary_title">35000</h1>
+                    <h1 className="summary_title"><CountUp end={35000} duration={3}/></h1>
                     <h4 className="summary_details">Students Worldwide</h4>
                     <hr
                       className="text-light w-25 mx-auto"
@@ -20,7 +21,7 @@ export default class Summary extends Component {
                   </Col>
                   <Col lg={4} md={4} sm={4}>
                   <span className="sum_icon"><i class="fa-solid fa-laptop"></i></span>
-                    <h1 className="summary_title">22</h1>
+                    <h1 className="summary_title"><CountUp end={22} duration={3}/></h1>
                     <h4 className="summary_details">Course Published</h4>
                     <hr
                       className="text-light w-25 mx-auto"
@@ -29,7 +30,7 @@ export default class Summary extends Component {
                   </Col>
                   <Col lg={4} md={4} sm={4}>
                   <span className="sum_icon"><i class="fa-solid fa-star"></i></span>
-                    <h1 className="summary_title">3000</h1>
+                    <h1 className="summary_title"><CountUp end={3000} duration={3}/></h1>
                     <h4 className="summary_details">Students Reviews</h4>
                     <hr
                       className="text-light w-25 mx-auto"

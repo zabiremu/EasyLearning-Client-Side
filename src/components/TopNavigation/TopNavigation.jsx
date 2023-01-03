@@ -12,13 +12,14 @@ export default class TopNavigation extends Component {
     this.state={
         NavTitle: "nav_title",
         logo:[WhiteLogo],
+        background: 'background'
     }
   }  
   onScroll = () =>{
     if(window.scrollY>100){
-        this.setState({NavTitle:'nav_scroll',logo:[logoBlack]})
+        this.setState({NavTitle:'nav_scroll',logo:[logoBlack],background:'background_scroll'})
     }else{
-        this.setState({NavTitle:'nav_title',logo:[WhiteLogo]})
+        this.setState({NavTitle:'nav_title',logo:[WhiteLogo],background:'background'})
     }
   }
 
@@ -29,7 +30,7 @@ export default class TopNavigation extends Component {
   render() {
     return (
       <Fragment>
-        <Navbar collapseOnSelect expand="md" bg="dark" variant="dark" fixed="top">
+        <Navbar className={this.state.background} collapseOnSelect expand="md"  variant="dark" fixed="top">
           <Container fluid>
             <Navbar.Brand href="#home" className={this.state.NavTitle}><img src={this.state.logo} alt="" className="logo"/></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />

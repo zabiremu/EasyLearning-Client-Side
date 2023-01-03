@@ -102,3 +102,11 @@
 .logo{
   transition: all linear 0.4s;
 }
+.background{
+  background-color: transparent !important;
+  transition: all linear 0.4s;
+}
+.background_scroll{
+  background-color: #fff !important;
+  transition: all linear 0.4s;
+}

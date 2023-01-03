@@ -1,3 +1,5 @@
+import '../../assets/css/bootstrap.min.css'
+import '../../assets/css/style.css'
 import React, { Component, Fragment } from "react";
 import {Container} from "react-bootstrap";
 import Nav from 'react-bootstrap/Nav';

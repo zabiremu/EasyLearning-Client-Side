@@ -176,3 +176,16 @@
 .summary_content{
   margin-top: 10%;
 }
+.project-card{
+  width: 22em;
+  background-color: #fff;
+  border-radius: 0.6em;
+  margin: 1em;
+  cursor: pointer;
+  box-shadow: 0 13px 25px -5px;
+  transition: all linear 0.4s;
+}
+.project-card:hover{
+  transform: scale(1.03);
+  box-shadow: 0 13px 30px -5px;
+}

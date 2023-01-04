@@ -4,6 +4,9 @@
   --subrayada: "Montserrat Subrayada", sans-serif;
   --raleway: "Raleway", sans-serif;
 }
+img{
+  width: 100%;
+}
 /*  co mmon section end  */
 .top-banner {
   background-image: url("../image/banner.jpg");
@@ -177,7 +180,6 @@
   margin-top: 10%;
 }
 .project-card{
-  width: 22em;
   background-color: #fff;
   border-radius: 0.6em;
   margin: 1em;
@@ -188,4 +190,11 @@
 .project-card:hover{
   transform: scale(1.03);
   box-shadow: 0 13px 30px -5px;
+}
+.viewDetails{
+  color: #051b35;
+  font-family: var(--montserrat);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
 }

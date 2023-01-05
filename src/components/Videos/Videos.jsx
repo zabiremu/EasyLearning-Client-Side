@@ -1,5 +1,7 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col, Modal, Button } from "react-bootstrap";
+import "video-react/dist/video-react.css";
+import { Player, BigPlayButton } from "video-react";
 
 export default class Videos extends Component {
   constructor() {
@@ -57,15 +59,15 @@ export default class Videos extends Component {
         </Container>
         <Modal size="lg" show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Modal heading</Modal.Title>
           </Modal.Header>
-          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+          <Modal.Body>
+            <Player src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4">
+              <BigPlayButton position="center" />
+            </Player>
+          </Modal.Body>
           <Modal.Footer>
             <Button variant="secondary" onClick={this.handleClose}>
               Close
-            </Button>
-            <Button variant="primary" onClick={this.handleClose}>
-              Save Changes
             </Button>
           </Modal.Footer>
         </Modal>

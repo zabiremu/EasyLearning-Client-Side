@@ -51,7 +51,7 @@ export default class Analysis extends Component {
   render() {
     return (
       <Fragment>
-        <Container>
+        <Container className="service">
           <h1 className="service_title text-center">Technolgy Used</h1>
           <div className="bottom"></div>
           <Row className="mx-auto">
@@ -80,7 +80,9 @@ export default class Analysis extends Component {
                   harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
                   quia. Quo neque error repudiandae fuga? Ipsa laudantium
                   molestias eos sapiente officiis modi at sunt excepturi
-                  expedita sint? Sed quibusdam recusandae alias error harum
+                  expedita sint?
+                  <br/><br/>
+                  Sed quibusdam recusandae alias error harum
                   maxime adipisci amet laborum. Perspiciatis minima nesciunt
                   dolorem!
                 </p>

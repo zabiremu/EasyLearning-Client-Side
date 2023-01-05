@@ -51,6 +51,9 @@ img{
   width:80px;
   height:80px;
 }
+.service{
+  padding-bottom: 80px;
+}
 .Service-card{
   margin: 5px;
   padding: 60px 30px;
@@ -73,6 +76,7 @@ img{
   font-weight: 400;
   color: #505050;
   margin-top: 1rem;
+  text-align: justify;
 }
 .service_title{
   font-family: var(--montserrat);
@@ -179,6 +183,9 @@ img{
 .summary_content{
   margin-top: 10%;
 }
+.Summary_card{
+  margin: 10% 0;
+}
 .project-card{
   background-color: #fff;
   border-radius: 0.6em;
@@ -198,3 +205,9 @@ img{
   font-size: 15px;
   text-decoration: none;
 }
+
+@media (max-width: 576px) { 
+  .Recent_projects{
+    padding-top: 200px;
+  }
+ }

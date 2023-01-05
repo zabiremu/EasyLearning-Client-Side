@@ -40,8 +40,8 @@ export default class Summary extends Component {
                 </Row>
               </Col>
               <Col lg={4} md={12} sm={12}>
-                <div className="mx-auto">
-                  <Card className="Summary_card">
+                <div className="mx-auto Summary_card">
+                  <Card className="">
                     <Card.Body>
                       <Card.Title className="card_title">What I have Achieved</Card.Title>
                       <Card.Text>

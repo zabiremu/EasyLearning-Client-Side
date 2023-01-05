@@ -8,7 +8,7 @@ export default class RecentProject extends Component {
   render() {
     return (
       <Fragment>
-        <Container className="text-center">
+        <Container className="Recent_projects text-center">
           <h1 className="service_title text-center">Recent Projects</h1>
           <div className="bottom"></div>
           <Row>

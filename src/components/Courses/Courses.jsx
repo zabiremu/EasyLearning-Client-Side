@@ -9,7 +9,7 @@ export default class Courses extends Component {
     return (
       <Fragment>
         <Container>
-          <h1 className="service_title text-center">Recent Projects</h1>
+          <h1 className="service_title text-center">Recent Courses</h1>
           <div className="bottom"></div>
           <Row>
             <Col lg={6} md={6} sm={12}>

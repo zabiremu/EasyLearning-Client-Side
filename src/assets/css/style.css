@@ -229,7 +229,7 @@ img{
 }
 .review{
   background-color: #051b35;
-  height: 460px;
+  height: 500px;
   margin: 60px 0;
 }
 .review_bottom{
@@ -263,6 +263,9 @@ img{
   color: #fff;
   margin-top: 1rem;
   text-align: center;
+}
+.slick-next{
+  right: 0px !important;
 }
 @media (max-width: 576px) { 
   .Recent_projects{

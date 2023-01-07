@@ -27,8 +27,8 @@ export default class Videos extends Component {
           <h1 className="service_title text-center">Our Videos</h1>
           <div className="bottom"></div>
           <Row>
-            <Col lg={6} md={6} sm={12}>
-              <div className="service-desc mt-2">
+            <Col lg={6} md={6} sm={12} className="my-auto">
+              <div className="video-desc">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
                 mollitia, molestiae quas vel sint commodi repudiandae
                 consequuntur voluptatum laborum numquam blanditiis harum
@@ -45,10 +45,11 @@ export default class Videos extends Component {
                 <br />
                 <br />
                 Sed quibusdam recusandae alias error harum maxime adipisci amet
-                laborum. Perspiciatis minima nesciunt dolorem!
+                laborum. Perspiciatis minima nesciunt dolorem!Ipsa laudantium molestias eos
+                sapiente officiis modi at sunt excepturi expedita sint?
               </div>
             </Col>
-            <Col lg={6} md={6} sm={12}>
+            <Col lg={6} md={6} sm={12} className="my-auto">
               <div className="videoCard text-center">
                 <span className="sum_icon" onClick={this.handleShow}>
                   <i class="fa-solid fa-video-slash"></i>

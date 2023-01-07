@@ -11,11 +11,13 @@ export default class Review extends Component {
     const settings = {
       dots: true,
       infinite: true,
+      vertical:true,
       speed: 3000,
       slidesToShow: 1,
       slidesToScroll: 1,
       autoplay: true,
       autoplaySpeed: 3000,
+      arrows:false,
       responsive: [
         {
           breakpoint: 1024,

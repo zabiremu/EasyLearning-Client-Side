@@ -6,7 +6,7 @@ import { init } from 'ityped'
 export default class AboutMe extends Component {
   componentDidMount(){
     const myElement = document.querySelector('#myElement')
-    init(myElement, { showCursor: false, strings: ['Web Developer!', 'Software Engineer!' ] })
+    init(myElement, { showCursor: false, strings: ['Web Developer', 'Software Engineer' ] })
   }
   render() {
     return (

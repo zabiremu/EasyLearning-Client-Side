@@ -8,6 +8,7 @@ import Courses from './components/Courses/Courses';
 import Videos from './components/Videos/Videos';
 import Review from './components/ClientReview/Review';
 import AboutMe from './components/AboutMe.jsx/AboutMe';
+import Footer from './components/Footer/Footer';
 function App() {
   return (
     <div>
@@ -21,6 +22,7 @@ function App() {
       <Videos/>
       <Review/>
       <AboutMe/>
+      <Footer/>
     </div>
   );
 }

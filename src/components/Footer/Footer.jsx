@@ -8,12 +8,31 @@ export default class Footer extends Component {
         <Container fluid className="footer_section">
           <Row>
             <Col lg={3} md={6} sm={12}>
-                <h4 className="footer_Name">Follow Us</h4>
-                <a href=""><i class="fa-brands fa-facebook"></i></a>
-                <a href=""><i class="fa-brands fa-youtube"></i></a>
-                <a href=""><i class="fa-brands fa-twitter"></i></a>
+               <div className="Social_Icon">
+                 <h4 className="footer_Name">Follow Us</h4>
+                 <a href=""><i class="fa-brands fa-facebook social"></i></a>
+                 <a href=""><i class="fa-brands fa-youtube social"></i></a>
+                 <a href=""><i class="fa-brands fa-twitter social"></i></a>
+               </div>
             </Col>
-            <Col lg={3} md={6} sm={12}><h4 className="footer_Name">Address</h4></Col>
+            <Col lg={3} md={6} sm={12}>
+                <div className="Social_Icon">
+                    <h4 className="footer_Name">Address</h4>
+                   <div className="footer_content">
+                     <p className="Footer_description">
+                         320 Polmart Road National Pike Caston Villa 
+                     </p>
+                     <p className="Footer_description">
+                        <span><i class="fa-solid fa-envelope" style={{ paddingRight: '8px'}}></i></span>
+                         Email: support@gmail.com
+                     </p>
+                     <p className="Footer_description">
+                     <span><i class="fa-solid fa-square-phone" style={{ paddingRight: '8px'}}></i></span>
+                         Phone: 123234322 
+                     </p>
+                   </div>
+                </div>
+            </Col>
             <Col lg={3} md={6} sm={12}><h4 className="footer_Name">Information</h4></Col>
             <Col lg={3} md={6} sm={12}><h4 className="footer_Name">Policy</h4></Col>
           </Row>

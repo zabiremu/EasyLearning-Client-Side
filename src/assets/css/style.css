@@ -267,6 +267,9 @@ img{
 .slick-next{
   right: 0px !important;
 }
+.slick-prev{
+  left: 0px !important;
+}
 @media (max-width: 576px) { 
   .Recent_projects{
     padding-top: 200px;

@@ -341,6 +341,16 @@ p.Footer_description{
 .footer_content{
   padding-top: 16px;
 }
+.footerLink{
+  text-decoration: none;
+  font-family: var(--raleway);
+  font-size: 14px;
+  font-weight: 400;
+  color: #fff;
+}
+.footerLink:hover{
+  color: #ffd900;
+}
 @media (max-width: 767.98px){
   .about_content{
     margin: 30px 0;

@@ -7,6 +7,9 @@
 img{
   width: 100%;
 }
+body{
+  scroll-behavior: smooth;
+}
 /*  co mmon section end  */
 .top-banner {
   background-image: url("../image/banner.jpg");
@@ -281,6 +284,26 @@ img{
 }
 .face{
   width:85%;
+}
+.about_content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.about_details{
+  color: #051b35;
+  font-weight: 700;
+  font-size: 40px;
+  font-family: var(--montserrat);
+}
+.about_title{
+  color: #051b35;
+  font-weight: 600;
+  font-size: 28px;
+  font-family: var(--raleway);
 }
 @media (max-width: 576px) { 
   .Recent_projects{

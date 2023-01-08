@@ -88,6 +88,11 @@ export default class Footer extends Component {
             </Col>
           </Row>
         </Container>
+        <Container fluid className="copyright">
+          <Col lg={12} md={12} sm={12}>
+           <p className="copyright_content text-center"> © Copyright 2016 by easy learning All rights reserved </p>
+          </Col>
+        </Container>
       </Fragment>
     );
   }

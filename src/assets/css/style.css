@@ -309,6 +309,8 @@ body{
   background-color: #051b35;
   margin-top: 5rem;
   box-shadow: 0 0 8px 0;
+  border-bottom: 1px solid #333;
+  padding-bottom: 40px;
 }
 .footer_Name{
   color: #fff;
@@ -350,6 +352,18 @@ p.Footer_description{
 }
 .footerLink:hover{
   color: #ffd900;
+}
+.copyright{
+  padding: 10px;
+  background-color: #051b35;
+  color: #fff;
+}
+.copyright_content{
+  color: #fff;
+  font-family: var(--raleway);
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 0;
 }
 @media (max-width: 767.98px){
   .about_content{

@@ -8,7 +8,7 @@ export default class AllProjects extends Component {
   render() {
     return (
         <Fragment>
-        <Container className="Recent_projects text-center">
+        <Container className="Recent_projects text-center p-0">
           <h1 className="service_title text-center">All Projects</h1>
           <div className="bottom"></div>
           <Row>

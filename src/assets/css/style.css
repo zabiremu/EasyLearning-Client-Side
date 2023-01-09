@@ -124,7 +124,7 @@ body{
   font-family: var(--montserrat);
   font-weight: 700;
   font-size: 16px;
-  color: #fff !important;
+  color: #fff;
   transition: all linear 0.4s;
 }
 .navItem_scroll{
@@ -395,6 +395,12 @@ p.Footer_description{
     font-weight: 600;
     color: #ffd900;
     padding-top: 40px;
+}
+.navItem {
+  text-decoration: none;
+}
+.navItem_scroll {
+  text-decoration: none;
 }
 @media (max-width: 767.98px){
   .about_content{

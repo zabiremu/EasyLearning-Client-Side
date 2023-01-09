@@ -7,15 +7,18 @@ import Navbar from 'react-bootstrap/Navbar';
 import WhiteLogo from '../../assets/image/logo_white.png'
 import logoBlack from '../../assets/image/logo_black.png'
 import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { Helmet } from 'react-helmet';
+
 export default class TopNavigation extends Component {
-  constructor(){
+  constructor(props){
     super();
     this.state={
         NavTitle: "nav_title",
         logo:[WhiteLogo],
         background: 'background',
         navItem:'navItem',
-        navVariant: 'dark'
+        navVariant: 'dark',
+        pageTitle:props.title,
     }
   }  
   onScroll = () =>{
@@ -31,8 +34,14 @@ export default class TopNavigation extends Component {
   }
 
   render() {
+    let activeStyle = {
+      color: "#ffd900",
+    };
     return (
       <Fragment>
+         {/* <Helmet> */}
+        <title>{this.state.pageTitle}</title>
+        {/* </Helmet> */}
         <Navbar className={this.state.background} collapseOnSelect expand="md"  variant={this.state.navVariant} fixed="top">
           <Container fluid>
             <Navbar.Brand href="#home" className={this.state.NavTitle}><img src={this.state.logo} alt="" className="logo"/></Navbar.Brand>
@@ -42,12 +51,18 @@ export default class TopNavigation extends Component {
                
               </Nav>
               <Nav>
-                <Nav.Link><NavLink to="/" className={this.state.navItem}>Home</NavLink></Nav.Link>
-                 <Nav.Link><NavLink to="/About" className={this.state.navItem}>About</NavLink></Nav.Link>
-                 <Nav.Link><NavLink to="/All-Services" className={this.state.navItem}>Service</NavLink></Nav.Link>
-                 <Nav.Link><NavLink to="/All-Courses" className={this.state.navItem}>Courses</NavLink></Nav.Link>
-                 <Nav.Link><NavLink to="/All-Projects" className={this.state.navItem}>Portfolio</NavLink></Nav.Link>
-                 <Nav.Link><NavLink to="/Contact-With-Us" className={this.state.navItem}>Contact Us</NavLink></Nav.Link>
+                <Nav.Link><NavLink to="/" className={this.state.navItem} style={({ isActive }) =>
+              isActive ? activeStyle : undefined}>Home</NavLink></Nav.Link>
+                 <Nav.Link><NavLink to="/about" className={this.state.navItem} style={({ isActive }) =>
+              isActive ? activeStyle : undefined}>About</NavLink></Nav.Link>
+                 <Nav.Link><NavLink to="/all-services" className={this.state.navItem} style={({ isActive }) =>
+              isActive ? activeStyle : undefined}>Service</NavLink></Nav.Link>
+                 <Nav.Link><NavLink to="/all-courses" className={this.state.navItem} style={({ isActive }) =>
+              isActive ? activeStyle : undefined}>Courses</NavLink></Nav.Link>
+                 <Nav.Link><NavLink to="/all-projects" className={this.state.navItem} style={({ isActive }) =>
+              isActive ? activeStyle : undefined}>Portfolio</NavLink></Nav.Link>
+                 <Nav.Link><NavLink to="/contact-with-us" className={this.state.navItem} style={({ isActive }) =>
+              isActive ? activeStyle : undefined}>Contact Us</NavLink></Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

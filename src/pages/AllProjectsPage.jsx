@@ -9,7 +9,7 @@ export default class AllProjectsPage extends Component {
   render() {
     return (
       <Fragment>
-        <TopNavigation/>
+        <TopNavigation title="All Projects"/>
         <TopPage title="All Projects"/>
         <AllProjects/>
         <Footer/>

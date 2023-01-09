@@ -9,7 +9,7 @@ export default class AllServicesPage extends Component {
   render() {
     return (
       <Fragment>
-        <TopNavigation />
+        <TopNavigation title="Our Services"/>
         <TopPage title="Our Services" />
         <AllServices />
         <Contact />

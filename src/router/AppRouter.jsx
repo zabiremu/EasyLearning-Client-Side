@@ -12,11 +12,11 @@ class AppRouter extends Component {
       <Fragment>
           <Routes>
             <Route exact path="/" element={<HomePages />} />
-            <Route exact path="/About" element={<AboutPage />} />
-            <Route exact path="/All-Courses" element={<AllCoursesPage />} />
-            <Route exact path="/All-Projects" element={<AllProjectsPage />} />
-            <Route exact path="/All-Services" element={<AllServicesPage />} />
-            <Route exact path="/Contact-With-Us" element={<ContactPage />} />
+            <Route exact path="/about" element={<AboutPage />} />
+            <Route exact path="/all-courses" element={<AllCoursesPage />} />
+            <Route exact path="/all-projects" element={<AllProjectsPage />} />
+            <Route exact path="/all-services" element={<AllServicesPage />} />
+            <Route exact path="/contact-with-us" element={<ContactPage />} />
           </Routes>
       </Fragment>
     );

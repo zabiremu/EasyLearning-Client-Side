@@ -6,7 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import WhiteLogo from '../../assets/image/logo_white.png'
 import logoBlack from '../../assets/image/logo_black.png'
-
+import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
 export default class TopNavigation extends Component {
   constructor(){
     super();
@@ -15,13 +15,14 @@ export default class TopNavigation extends Component {
         logo:[WhiteLogo],
         background: 'background',
         navItem:'navItem',
+        navVariant: 'dark'
     }
   }  
   onScroll = () =>{
     if(window.scrollY>100){
-        this.setState({NavTitle:'nav_scroll',logo:[logoBlack],background:'background_scroll',navItem:'navItem_scroll'})
+        this.setState({NavTitle:'nav_scroll',logo:[logoBlack],background:'background_scroll',navItem:'navItem_scroll',navVariant:'light'})
     }else{
-        this.setState({NavTitle:'nav_title',logo:[WhiteLogo],background:'background', navItem:'navItem'})
+        this.setState({NavTitle:'nav_title',logo:[WhiteLogo],background:'background', navItem:'navItem',navVariant:'dark'})
     }
   }
 
@@ -32,7 +33,7 @@ export default class TopNavigation extends Component {
   render() {
     return (
       <Fragment>
-        <Navbar className={this.state.background} collapseOnSelect expand="md"  variant="dark" fixed="top">
+        <Navbar className={this.state.background} collapseOnSelect expand="md"  variant={this.state.navVariant} fixed="top">
           <Container fluid>
             <Navbar.Brand href="#home" className={this.state.NavTitle}><img src={this.state.logo} alt="" className="logo"/></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -41,12 +42,12 @@ export default class TopNavigation extends Component {
                
               </Nav>
               <Nav>
-                <Nav.Link href="#deets" className={this.state.navItem}>Home</Nav.Link>
-                <Nav.Link href="#deets" className={this.state.navItem}>About</Nav.Link>
-                <Nav.Link href="#deets" className={this.state.navItem}>Service</Nav.Link>
-                <Nav.Link href="#deets" className={this.state.navItem}>Courses</Nav.Link>
-                <Nav.Link href="#deets" className={this.state.navItem}>Portfolio</Nav.Link>
-                <Nav.Link href="#deets" className={this.state.navItem}>Contact Us</Nav.Link>
+                <Nav.Link><NavLink to="/" className={this.state.navItem}>Home</NavLink></Nav.Link>
+                 <Nav.Link><NavLink to="/About" className={this.state.navItem}>About</NavLink></Nav.Link>
+                 <Nav.Link><NavLink to="/All-Services" className={this.state.navItem}>Service</NavLink></Nav.Link>
+                 <Nav.Link><NavLink to="/All-Courses" className={this.state.navItem}>Courses</NavLink></Nav.Link>
+                 <Nav.Link><NavLink to="/All-Projects" className={this.state.navItem}>Portfolio</NavLink></Nav.Link>
+                 <Nav.Link><NavLink to="/Contact-With-Us" className={this.state.navItem}>Contact Us</NavLink></Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>

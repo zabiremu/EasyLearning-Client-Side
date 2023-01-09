@@ -8,7 +8,7 @@ export default class Footer extends Component {
         <Container fluid className="footer_section">
           <Row>
             <Col lg={3} md={6} sm={12}>
-              <div className="Social_Icon">
+              <div className="Social_Icon text-center">
                 <h4 className="footer_Name">Follow Us</h4>
                 <a href="">
                   <i class="fa-brands fa-facebook social"></i>

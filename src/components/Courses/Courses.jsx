@@ -4,6 +4,7 @@ import pdetails1 from "../../assets/image/brainstorm-meeting.jpg";
 import pdetails2 from "../../assets/image/woman-attending-online-class.jpg";
 import pdetails3 from '../../assets/image/guy-lesson_1098-14193.webp'
 import pdetails4 from '../../assets/image/discussing-video-course.jpg'
+import { NavLink } from "react-router-dom";
 export default class Courses extends Component {
   render() {
     return (
@@ -23,9 +24,9 @@ export default class Courses extends Component {
                     Some quick example text to build on the Project Name One and
                     make up the bulk of the card's content.
                   </p>
-                  <a className="viewDetails" href="">
+                  <NavLink className="viewDetails" to="/course-details">
                     View Details
-                  </a>
+                  </NavLink>
                 </Col>
               </Row>
             </Col>
@@ -40,9 +41,9 @@ export default class Courses extends Component {
                     Some quick example text to build on the Project Name One and
                     make up the bulk of the card's content.
                   </p>
-                  <a className="viewDetails" href="">
+                  <NavLink className="viewDetails" to="/course-details">
                     View Details
-                  </a>
+                  </NavLink>
                 </Col>
               </Row>
             </Col>
@@ -57,9 +58,9 @@ export default class Courses extends Component {
                     Some quick example text to build on the Project Name One and
                     make up the bulk of the card's content.
                   </p>
-                  <a className="viewDetails" href="">
+                  <NavLink className="viewDetails" to="/course-details">
                     View Details
-                  </a>
+                  </NavLink>
                 </Col>
               </Row>
             </Col>
@@ -74,9 +75,9 @@ export default class Courses extends Component {
                     Some quick example text to build on the Project Name One and
                     make up the bulk of the card's content.
                   </p>
-                  <a className="viewDetails" href="">
+                  <NavLink className="viewDetails" to="/course-details">
                     View Details
-                  </a>
+                  </NavLink>
                 </Col>
               </Row>
             </Col>

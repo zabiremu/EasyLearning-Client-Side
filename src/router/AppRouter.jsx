@@ -10,6 +10,7 @@ import Refund from "../pages/Refund";
 import Terms from "../pages/Terms";
 import Privacy from "../pages/Privacy";
 import ProjectDetailsPage from "../pages/ProjectDetailsPage";
+import CourseDetailsPage from "../pages/CourseDetailsPage";
 class AppRouter extends Component {
   render() {
     return (
@@ -25,6 +26,7 @@ class AppRouter extends Component {
             <Route exact path="/terms" element={<Terms />} />
             <Route exact path="/privacy" element={<Privacy />} />
             <Route exact path="/project-details" element={<ProjectDetailsPage />} />
+            <Route exact path="/course-details" element={<CourseDetailsPage />} />
           </Routes>
       </Fragment>
     );

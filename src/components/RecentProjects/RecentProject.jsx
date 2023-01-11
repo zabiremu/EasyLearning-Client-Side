@@ -3,9 +3,14 @@ import { Container, Row, Card, Button, Col } from "react-bootstrap";
 import project1 from '../../assets/image/page1.png'
 import project2 from '../../assets/image/page2.png'
 import project3 from '../../assets/image/page3.png'
+import { NavLink } from "react-router-dom";
 
 export default class RecentProject extends Component {
   render() {
+    const style = {
+      textDecoration: 'none',
+      color: '#fff',
+    }
     return (
       <Fragment>
         <Container className="Recent_projects text-center">
@@ -22,7 +27,7 @@ export default class RecentProject extends Component {
                       Some quick example text to build on the Project Name One and make
                       up the bulk of the card's content.
                     </Card.Text>
-                    <Button variant="primary">Visit Site</Button>
+                    <Button variant="primary"><NavLink to="project-details" style={style}> Visit Site</NavLink></Button>
                   </Card.Body>
                 </Card>
               </div>
@@ -37,7 +42,7 @@ export default class RecentProject extends Component {
                       Some quick example text to build on the Project Name One and make
                       up the bulk of the card's content.
                     </Card.Text>
-                    <Button variant="primary">Visit Site</Button>
+                    <Button variant="primary"><NavLink to="project-details" style={style}>Visit Site</NavLink></Button>
                   </Card.Body>
                 </Card>
               </div>
@@ -52,7 +57,7 @@ export default class RecentProject extends Component {
                       Some quick example text to build on the Project Name One and make
                       up the bulk of the card's content.
                     </Card.Text>
-                    <Button variant="primary">Visit Site</Button>
+                    <Button variant="primary"><NavLink to="project-details" style={style}>Visit Site</NavLink></Button>
                   </Card.Body>
                 </Card>
               </div>

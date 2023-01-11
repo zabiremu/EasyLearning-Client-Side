@@ -1,16 +1,16 @@
 import React, { Component, Fragment } from 'react'
-import AllProjects from '../components/AllProjects/AllProjects'
 import Footer from '../components/Footer/Footer'
+import PrivacyAndPolicy from '../components/PrivacyAndPolicy/PrivacyAndPolicy'
 import TopNavigation from '../components/TopNavigation/TopNavigation'
 import TopPage from '../components/TopPage/TopPage'
 
-export default class AllProjectsPage extends Component {
+export default class Privacy extends Component {
   render() {
     return (
       <Fragment>
-        <TopNavigation title="All Projects"/>
-        <TopPage title="All Projects"/>
-        <AllProjects/>
+        <TopNavigation title="Privacy And Policy"/>
+        <TopPage title="Privacy And Policy"/>
+        <PrivacyAndPolicy/>
         <Footer/>
       </Fragment>
     )

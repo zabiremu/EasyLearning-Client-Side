@@ -6,8 +6,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import WhiteLogo from '../../assets/image/logo_white.png'
 import logoBlack from '../../assets/image/logo_black.png'
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
-import { Helmet } from 'react-helmet';
+import { NavLink } from "react-router-dom";
 
 export default class TopNavigation extends Component {
   constructor(props){
@@ -39,9 +38,7 @@ export default class TopNavigation extends Component {
     };
     return (
       <Fragment>
-         {/* <Helmet> */}
         <title>{this.state.pageTitle}</title>
-        {/* </Helmet> */}
         <Navbar className={this.state.background} collapseOnSelect expand="md"  variant={this.state.navVariant} fixed="top">
           <Container fluid>
             <Navbar.Brand href="#home" className={this.state.NavTitle}><img src={this.state.logo} alt="" className="logo"/></Navbar.Brand>

@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { Col, Container, Row } from "react-bootstrap";
-
+import { NavLink } from "react-router-dom";
 export default class Footer extends Component {
   render() {
     return (
@@ -71,17 +71,17 @@ export default class Footer extends Component {
               <div className="Social_Icon">
                 <h4 className="footer_Name">Policy</h4>
                 <div className="footer_content">
-                  <a className="footerLink" href="">
+                  <NavLink className="footerLink" to="/refund">
                     Refund Policy
-                  </a>
+                  </NavLink>
                   <br />
-                  <a className="footerLink" href="">
+                  <NavLink className="footerLink" to="/terms">
                     Terms And Condition
-                  </a>
+                  </NavLink>
                   <br />
-                  <a className="footerLink" href="">
+                  <NavLink className="footerLink" to="/privacy">
                     Privacy Policy
-                  </a>
+                  </NavLink>
                   <br />
                 </div>
               </div>

@@ -4,6 +4,9 @@ import TopNavigation from '../components/TopNavigation/TopNavigation'
 import TopPage from '../components/TopPage/TopPage'
 import Footer from '../components/Footer/Footer'
 export default class Refund extends Component {
+  componentDidMount(){
+    window.scroll(0,0)
+  }
   render() {
     return (
       <Fragment>

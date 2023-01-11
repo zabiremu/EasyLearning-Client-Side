@@ -41,7 +41,7 @@ export default class TopNavigation extends Component {
         <title>{this.state.pageTitle}</title>
         <Navbar className={this.state.background} collapseOnSelect expand="md"  variant={this.state.navVariant} fixed="top">
           <Container fluid>
-            <Navbar.Brand href="#home" className={this.state.NavTitle}><img src={this.state.logo} alt="" className="logo"/></Navbar.Brand>
+            <Navbar.Brand className={this.state.NavTitle}><NavLink to="/"><img src={this.state.logo} alt="" className="logo"/></NavLink></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="me-auto">

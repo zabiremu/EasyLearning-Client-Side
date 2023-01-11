@@ -12,6 +12,9 @@ import AboutMe from "../components/AboutMe.jsx/AboutMe";
 import Footer from "../components/Footer/Footer";
 
 export default class HomePages extends Component {
+  componentDidMount(){
+    window.scroll(0,0)
+  }
   render() {
     return (
       <Fragment>

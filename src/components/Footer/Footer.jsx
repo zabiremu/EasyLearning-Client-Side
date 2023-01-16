@@ -1,7 +1,28 @@
 import React, { Component, Fragment } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
+import RestClient from "../../RestApi/RestClient";
+import AppUrl from "../../RestApi/AppUrl";
+import parse from "html-react-parser";
+
 export default class Footer extends Component {
+  constructor() {
+    super();
+    this.state = {
+      address: "...",
+      email: "...",
+      phone: "...",
+      facebook: "...",
+      youtube: "...",
+      twitter: "...",
+      footer_credit: "...",
+    };
+  }
+  componentDidMount() {
+    RestClient.getRequest(AppUrl.footerDetails).then((result) => {
+      this.setState({ address: result[0]["address"],email: result[0]["email"],phone: result[0]["phone"],facebook: result[0]["facebook"],youtube: result[0]["youtube"],twitter: result[0]["twitter"],footer_credit: result[0]["footer_credit"] });
+    });
+  }
   render() {
     return (
       <Fragment>
@@ -10,13 +31,13 @@ export default class Footer extends Component {
             <Col lg={3} md={6} sm={12}>
               <div className="Social_Icon text-center">
                 <h4 className="footer_Name">Follow Us</h4>
-                <a href="">
+                <a href={this.state.facebook}>
                   <i class="fa-brands fa-facebook social"></i>
                 </a>
-                <a href="">
+                <a href={this.state.youtube}>
                   <i class="fa-brands fa-youtube social"></i>
                 </a>
-                <a href="">
+                <a href={this.state.twitter}>
                   <i class="fa-brands fa-twitter social"></i>
                 </a>
               </div>
@@ -26,7 +47,7 @@ export default class Footer extends Component {
                 <h4 className="footer_Name">Address</h4>
                 <div className="footer_content">
                   <p className="Footer_description">
-                    320 Polmart Road National Pike Caston Villa
+                    {parse(this.state.address)}
                   </p>
                   <p className="Footer_description">
                     <span>
@@ -35,7 +56,7 @@ export default class Footer extends Component {
                         style={{ paddingRight: "8px" }}
                       ></i>
                     </span>
-                    Email: support@gmail.com
+                    Email:  {parse(this.state.email)}
                   </p>
                   <p className="Footer_description">
                     <span>
@@ -44,7 +65,7 @@ export default class Footer extends Component {
                         style={{ paddingRight: "8px" }}
                       ></i>
                     </span>
-                    Phone: 123234322
+                    Phone: {parse(this.state.phone)}
                   </p>
                 </div>
               </div>
@@ -90,7 +111,7 @@ export default class Footer extends Component {
         </Container>
         <Container fluid className="copyright">
           <Col lg={12} md={12} sm={12}>
-           <p className="copyright_content text-center"> © Copyright 2016 by easy learning All rights reserved </p>
+           <p className="copyright_content text-center">  {parse(this.state.footer_credit)}</p>
           </Col>
         </Container>
       </Fragment>

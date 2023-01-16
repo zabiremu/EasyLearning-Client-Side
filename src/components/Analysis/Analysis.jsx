@@ -1,54 +1,30 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  Tooltip,
-  ResponsiveContainer,
-} from "recharts";
+import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer } from "recharts";
+import AppUrl from "../../RestApi/AppUrl";
+import RestClient from "../../RestApi/RestClient";
+import parse from 'html-react-parser';
 
 export default class Analysis extends Component {
   constructor() {
     super();
     this.state = {
-      data: [
-        {
-          Technology: "PHP",
-          project: 100,
-        },
-        {
-          Technology: "Mysqli",
-          project: 90,
-        },
-        {
-          Technology: "Laravel",
-          project: 95,
-        },
-        {
-          Technology: "React",
-          project: 85,
-        },
-        {
-          Technology: "Opencart",
-          project: 80,
-        },
-        {
-          Technology: "Vue Js",
-          project: 70,
-        },
-        {
-          Technology: "Django",
-          project: 60,
-        },
-        {
-          Technology: "JavaScript",
-          project: 100,
-        },
-      ],
+      data: [],
+      techDesc: "...",
     };
   }
+  componentDidMount() {
+    RestClient.getRequest(AppUrl.chartData).then((result) => {
+      this.setState({ data: result });
+    });
+    RestClient.getRequest(AppUrl.Toptech).then((result) => {
+      this.setState({ techDesc: result[0]["tech_description"] });
+    });
+  }
   render() {
+    const style = {
+      textAlign: "justify",
+    }
     return (
       <Fragment>
         <Container className="service">
@@ -66,25 +42,8 @@ export default class Analysis extends Component {
             </Col>
             <Col lg={6} md={12} sm={12}>
               <div>
-                <p className="text-justify service-desc">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Maxime mollitia, molestiae quas vel sint commodi repudiandae
-                  consequuntur voluptatum laborum numquam blanditiis harum
-                  quisquam eius sed odit fugiat iusto fuga praesentium optio,
-                  eaque rerum! Provident similique accusantium nemo autem.
-                  <br />
-                  <br />
-                  Veritatis obcaecati tenetur iure eius earum ut molestias
-                  architecto voluptate aliquam nihil, eveniet aliquid culpa
-                  officia aut! Impedit sit sunt quaerat, odit, tenetur error,
-                  harum nesciunt ipsum debitis quas aliquid. Reprehenderit,
-                  quia. Quo neque error repudiandae fuga? Ipsa laudantium
-                  molestias eos sapiente officiis modi at sunt excepturi
-                  expedita sint?
-                  <br/><br/>
-                  Sed quibusdam recusandae alias error harum
-                  maxime adipisci amet laborum. Perspiciatis minima nesciunt
-                  dolorem!
+                <p className="text-justify service-desc" style={style}>
+                {parse(this.state.techDesc)}
                 </p>
               </div>
             </Col>

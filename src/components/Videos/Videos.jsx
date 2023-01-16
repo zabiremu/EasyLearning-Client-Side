@@ -2,12 +2,17 @@ import React, { Component, Fragment } from "react";
 import { Container, Row, Col, Modal, Button } from "react-bootstrap";
 import "video-react/dist/video-react.css";
 import { Player, BigPlayButton } from "video-react";
+import RestClient from "../../RestApi/RestClient";
+import AppUrl from "../../RestApi/AppUrl";
+import parse from "html-react-parser";
 
 export default class Videos extends Component {
   constructor() {
     super();
     this.state = {
       show: false,
+      videoDesc: '...',
+      videoUrl: "..."
     };
   }
   handleClose = () => {
@@ -20,6 +25,11 @@ export default class Videos extends Component {
       show: true,
     });
   };
+  componentDidMount() {
+    RestClient.getRequest(AppUrl.VideoDesc).then(result => {
+      this.setState({ videoDesc: result[0]['video_description'],videoUrl: result[0]['video_url'] });
+    });
+  }
   render() {
     return (
       <Fragment>
@@ -29,24 +39,7 @@ export default class Videos extends Component {
           <Row>
             <Col lg={6} md={6} sm={12} className="my-auto">
               <div className="video-desc">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-                mollitia, molestiae quas vel sint commodi repudiandae
-                consequuntur voluptatum laborum numquam blanditiis harum
-                quisquam eius sed odit fugiat iusto fuga praesentium optio,
-                eaque rerum! Provident similique accusantium nemo autem.
-                <br />
-                <br />
-                Veritatis obcaecati tenetur iure eius earum ut molestias
-                architecto voluptate aliquam nihil, eveniet aliquid culpa
-                officia aut! Impedit sit sunt quaerat, odit, tenetur error,
-                harum nesciunt ipsum debitis quas aliquid. Reprehenderit, quia.
-                Quo neque error repudiandae fuga? Ipsa laudantium molestias eos
-                sapiente officiis modi at sunt excepturi expedita sint?
-                <br />
-                <br />
-                Sed quibusdam recusandae alias error harum maxime adipisci amet
-                laborum. Perspiciatis minima nesciunt dolorem!Ipsa laudantium molestias eos
-                sapiente officiis modi at sunt excepturi expedita sint?
+              {parse(this.state.videoDesc)}
               </div>
             </Col>
             <Col lg={6} md={6} sm={12} className="my-auto">
@@ -62,7 +55,7 @@ export default class Videos extends Component {
           <Modal.Header closeButton>
           </Modal.Header>
           <Modal.Body>
-            <Player src="https://media.w3.org/2010/05/sintel/trailer_hd.mp4">
+            <Player src={this.state.videoUrl}>
               <BigPlayButton position="center" />
             </Player>
           </Modal.Body>

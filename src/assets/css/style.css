@@ -79,6 +79,7 @@ body{
   font-weight: 400;
   color: #505050;
   margin-top: 1rem;
+  text-align: justify;
 }
 .service_title{
   font-family: var(--montserrat);

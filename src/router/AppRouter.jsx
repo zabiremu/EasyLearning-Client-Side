@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route  } from "react-router-dom";
 import HomePages from "../pages/HomePages"
 import AboutPage from "../pages/AboutPage"
 import AllCoursesPage from "../pages/AllCoursesPage"
@@ -11,8 +11,8 @@ import Terms from "../pages/Terms";
 import Privacy from "../pages/Privacy";
 import ProjectDetailsPage from "../pages/ProjectDetailsPage";
 import CourseDetailsPage from "../pages/CourseDetailsPage";
-class AppRouter extends Component {
-  render() {
+
+function AppRouter(){  
     return (
       <Fragment>
           <Routes>
@@ -25,12 +25,11 @@ class AppRouter extends Component {
             <Route exact path="/refund" element={<Refund />} />
             <Route exact path="/terms" element={<Terms />} />
             <Route exact path="/privacy" element={<Privacy />} />
-            <Route exact path="/project-details" element={<ProjectDetailsPage />} />
-            <Route exact path="/course-details" element={<CourseDetailsPage />} />
+            <Route exact path="/project-details/:projectID" element={<ProjectDetailsPage />} />
+            <Route exact path="/course-details/:courseID" element={<CourseDetailsPage />} />
           </Routes>
       </Fragment>
     );
-  }
 }
 
 export default AppRouter;

@@ -1,14 +1,38 @@
 import React, { Component, Fragment } from "react";
 import { Container, Row, Col, Button, Form } from "react-bootstrap";
+import RestClient from "../../RestApi/RestClient";
+import AppUrl from "../../RestApi/AppUrl";
 
 export default class Contact extends Component {
+
+  constructor(){
+    super();
+    this.state={
+      address: '...',
+      email: '...',
+      phone: '...',
+    }
+  }
+
+  componentDidMount(){
+    RestClient.getRequest(AppUrl.footerDetails).then(result=>{
+      this.setState({address:result[0]['address'],email:result[0]['email'],phone:result[0]['phone']})
+    })
+  }
 
   formSubmit = () => {
     let name = document.getElementById('name').value
     let email = document.getElementById('email').value
     let message = document.getElementById('message').value
-    alert (name + '/' + email + '/' + message )
+    let data = {name:name,email:email,message:message}
+    RestClient.postRequest(AppUrl.contact,JSON.stringify(data)).then(result=>{
+      alert('Thanks For Sending Message')
+    }).catch(error=>{
+      alert(error)
+    })
   }
+
+
   render() {
     return (
       <Fragment>
@@ -37,7 +61,7 @@ export default class Contact extends Component {
                 <h4 className="Service-name m-0 pb-3">Address</h4>
                 <div className="footer_content">
                   <p className="service-desc p-0">
-                    320 Polmart Road National Pike Caston Villa
+                    {this.state.address}
                   </p>
                   <p className="service-desc p-0">
                     <span>
@@ -46,7 +70,7 @@ export default class Contact extends Component {
                         style={{ paddingRight: "8px" }}
                       ></i>
                     </span>
-                    Email: support@gmail.com
+                    Email: {this.state.email}
                   </p>
                   <p className="service-desc p-0">
                     <span>
@@ -55,7 +79,7 @@ export default class Contact extends Component {
                         style={{ paddingRight: "8px" }}
                       ></i>
                     </span>
-                    Phone: 123234322
+                    Phone:{this.state.phone}
                   </p>
                 </div>
               </div>

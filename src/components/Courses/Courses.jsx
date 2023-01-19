@@ -7,6 +7,7 @@ import pdetails4 from '../../assets/image/discussing-video-course.jpg'
 import { NavLink } from "react-router-dom";
 import AppUrl from "../../RestApi/AppUrl";
 import RestClient from "../../RestApi/RestClient";
+
 export default class Courses extends Component {
   constructor(){
     super();
@@ -28,11 +29,11 @@ export default class Courses extends Component {
           <img src={result.short_img} alt="" />
         </Col>
         <Col lg={6} md={6} sm={6}>
-          <h5 className="Service-name">{result.	short_title}</h5>
+          <h5 className="Service-name">{result.short_title}</h5>
           <p className="service-desc">
           {result.short_description}
           </p>
-          <NavLink className="viewDetails" to="/course-details">
+          <NavLink className="viewDetails" to={"/course-details/"+result.id}>
             View Details
           </NavLink>
         </Col>

@@ -15,7 +15,6 @@ function ProjectDetails() {
   });
   useEffect(() => {
     RestClient.getRequest(AppUrl.projectsDetails + projectID).then((result) => {
-      console.log(result)
       setUpdate({
         img: result["image_two"],
         p_name: result["project_name"],

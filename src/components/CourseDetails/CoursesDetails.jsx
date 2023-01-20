@@ -19,6 +19,8 @@ function CoursesDetails() {
     total_duration:'',
     total_lecture:'',
     category:'',
+    tags:'',
+    author:'',
   })
 
   useEffect(()=>{
@@ -33,6 +35,8 @@ function CoursesDetails() {
         total_duration:result['total_duration'],
         total_lecture:result['total_lecture'],
         category:result['category'],
+        tags:result['tags'],
+        author:result['author'],
       })
     })
   },[])
@@ -44,7 +48,7 @@ function CoursesDetails() {
             <h2 className="pb-3 p-details-title">
              {data.long_title}
             </h2>
-            <img src={image} alt="" className="pb-3" />
+            <img src={data.short_img} alt="" className="pb-3" />
             <p className="p-details-para">
               {data.long_description}
             </p>
@@ -68,6 +72,14 @@ function CoursesDetails() {
                 <li>
                   <i class="fa fa-clone"></i>
                   <span>Categories:</span> {data.category}
+                </li>
+                <li>
+                  <i class="fa fa-clone"></i>
+                  <span>Tags:</span> {data.tags}
+                </li>
+                <li>
+                  <i class="fa fa-clone"></i>
+                  <span>Author:</span> {data.author}
                 </li>
               </ul>
               <div class="price-wrap text-center">

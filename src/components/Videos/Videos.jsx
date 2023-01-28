@@ -5,14 +5,16 @@ import { Player, BigPlayButton } from "video-react";
 import RestClient from "../../RestApi/RestClient";
 import AppUrl from "../../RestApi/AppUrl";
 import parse from "html-react-parser";
+import Zoom from "react-reveal/Zoom";
+import LightSpeed from "react-reveal/LightSpeed";
 
 export default class Videos extends Component {
   constructor() {
     super();
     this.state = {
       show: false,
-      videoDesc: '...',
-      videoUrl: "..."
+      videoDesc: "...",
+      videoUrl: "...",
     };
   }
   handleClose = () => {
@@ -26,34 +28,40 @@ export default class Videos extends Component {
     });
   };
   componentDidMount() {
-    RestClient.getRequest(AppUrl.VideoDesc).then(result => {
-      this.setState({ videoDesc: result[0]['video_description'],videoUrl: result[0]['video_url'] });
+    RestClient.getRequest(AppUrl.VideoDesc).then((result) => {
+      this.setState({
+        videoDesc: result[0]["video_description"],
+        videoUrl: result[0]["video_url"],
+      });
     });
   }
   render() {
     return (
       <Fragment>
         <Container>
+        <LightSpeed right>
           <h1 className="service_title text-center">Our Videos</h1>
+        </LightSpeed>    
           <div className="bottom"></div>
           <Row>
             <Col lg={6} md={6} sm={12} className="my-auto">
-              <div className="video-desc">
-              {parse(this.state.videoDesc)}
-              </div>
+              <Zoom bottom>
+                <div className="video-desc">{parse(this.state.videoDesc)}</div>
+              </Zoom>
             </Col>
             <Col lg={6} md={6} sm={12} className="my-auto">
+            <Zoom bottom>  
               <div className="videoCard text-center">
                 <span className="sum_icon" onClick={this.handleShow}>
                   <i class="fa-solid fa-video-slash"></i>
                 </span>
               </div>
+            </Zoom>
             </Col>
           </Row>
         </Container>
         <Modal size="lg" show={this.state.show} onHide={this.handleClose}>
-          <Modal.Header closeButton>
-          </Modal.Header>
+          <Modal.Header closeButton></Modal.Header>
           <Modal.Body>
             <Player src={this.state.videoUrl}>
               <BigPlayButton position="center" />

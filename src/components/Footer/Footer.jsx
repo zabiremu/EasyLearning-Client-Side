@@ -74,17 +74,17 @@ export default class Footer extends Component {
               <div className="Social_Icon">
                 <h4 className="footer_Name">Information</h4>
                 <div className="footer_content">
-                  <a className="footerLink" href="">
+                  <NavLink className="footerLink" to="/about">
                     About Me
-                  </a>
+                  </NavLink>
                   <br />
-                  <a className="footerLink" href="">
+                  <NavLink className="footerLink" to="/about">
                     Company Profile
-                  </a>
+                  </NavLink>
                   <br />
-                  <a className="footerLink" href="">
+                  <NavLink className="footerLink" to="/contact-with-us">
                     Contact Us
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </Col>

@@ -3,7 +3,9 @@ import { Container, Row, Col } from "react-bootstrap";
 import { BarChart, Bar, XAxis, Tooltip, ResponsiveContainer } from "recharts";
 import AppUrl from "../../RestApi/AppUrl";
 import RestClient from "../../RestApi/RestClient";
-import parse from 'html-react-parser';
+import parse from "html-react-parser";
+import Zoom from "react-reveal/Zoom";
+import LightSpeed from "react-reveal/LightSpeed";
 
 export default class Analysis extends Component {
   constructor() {
@@ -24,11 +26,13 @@ export default class Analysis extends Component {
   render() {
     const style = {
       textAlign: "justify",
-    }
+    };
     return (
       <Fragment>
         <Container className="service">
-          <h1 className="service_title text-center">Technolgy Used</h1>
+          <LightSpeed right>
+            <h1 className="service_title text-center">Technolgy Used</h1>
+          </LightSpeed>
           <div className="bottom"></div>
           <Row className="mx-auto">
             <Col lg={6} md={12} sm={12}>
@@ -41,11 +45,13 @@ export default class Analysis extends Component {
               </ResponsiveContainer>
             </Col>
             <Col lg={6} md={12} sm={12}>
-              <div>
-                <p className="text-justify service-desc" style={style}>
-                {parse(this.state.techDesc)}
-                </p>
-              </div>
+              <Zoom bottom>
+                <div>
+                  <p className="text-justify service-desc" style={style}>
+                    {parse(this.state.techDesc)}
+                  </p>
+                </div>
+              </Zoom>
             </Col>
           </Row>
         </Container>
